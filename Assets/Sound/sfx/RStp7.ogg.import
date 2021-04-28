@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RStp7.ogg-2c18611be9723b4a9d905fb0dc45894d.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/sfx/RStp7.ogg"
+dest_files=[ "res://.import/RStp7.ogg-2c18611be9723b4a9d905fb0dc45894d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

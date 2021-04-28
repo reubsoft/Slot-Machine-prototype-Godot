@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Slot Pull.ogg-85d465fa83e11fe335581006d197b502.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/sfx/Slot Pull.ogg"
+dest_files=[ "res://.import/Slot Pull.ogg-85d465fa83e11fe335581006d197b502.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

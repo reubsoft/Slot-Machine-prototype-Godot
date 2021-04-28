@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/Sprites/Characters/4.png" type="Texture" id=1]
+[ext_resource path="res://Script/Reel.gd" type="Script" id=2]
+[ext_resource path="res://Script/slot.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sprites/Characters/7.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/Characters/9.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/Characters/1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/Characters/3.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/Characters/5.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/Characters/6.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/Characters/2.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/Characters/8.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sound/sfx/RS F1.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Sound/sfx/RStp7.ogg" type="AudioStream" id=13]
+
+[node name="Reel" type="Node2D"]
+position = Vector2( -192, -128 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 2 )
+reelSize = [ 2, 2, 2, 2, 2, 2, 2, 2, 30 ]
+textures = [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 5 ) ]
+
+[node name="Real" type="Node2D" parent="."]
+
+[node name="back" type="Sprite" parent="Real"]
+position = Vector2( 0, -256 )
+texture = ExtResource( 6 )
+
+[node name="1" type="Sprite" parent="Real"]
+texture = ExtResource( 6 )
+script = ExtResource( 3 )
+
+[node name="2" type="Sprite" parent="Real"]
+position = Vector2( 0, 256 )
+texture = ExtResource( 6 )
+script = ExtResource( 3 )
+
+[node name="3" type="Sprite" parent="Real"]
+position = Vector2( 0, 512 )
+texture = ExtResource( 6 )
+script = ExtResource( 3 )
+
+[node name="back1" type="Sprite" parent="Real"]
+position = Vector2( 0, 768 )
+texture = ExtResource( 5 )
+
+[node name="Fake" type="Node2D" parent="."]
+position = Vector2( 0, -1280 )
+
+[node name="0" type="Sprite" parent="Fake"]
+position = Vector2( 0, -256 )
+texture = ExtResource( 6 )
+
+[node name="1" type="Sprite" parent="Fake"]
+texture = ExtResource( 6 )
+
+[node name="2" type="Sprite" parent="Fake"]
+position = Vector2( 0, 256 )
+texture = ExtResource( 6 )
+
+[node name="3" type="Sprite" parent="Fake"]
+position = Vector2( 0, 512 )
+texture = ExtResource( 6 )
+
+[node name="4" type="Sprite" parent="Fake"]
+position = Vector2( 0, 768 )
+texture = ExtResource( 5 )
+
+[node name="sfxReel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="sfxReelStop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
